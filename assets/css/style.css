@@ -1,0 +1,52 @@
+@import url('https://wowrakibul02.github.io/explore/assets/css/root.css');
+body{
+    background: var(--white);
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Hind Siliguri', sans-serif;
+}
+p,ul,a,li{
+    font-family: 'Hind Siliguri', sans-serif ;
+}
+
+header{
+    background: transparent;
+    border-bottom: 1px solid var(--dark-10);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    height: 96px;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    gap: -12px;
+    font-size: 32px;
+    font-family: Hind Siliguri;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0.16px;
+}
+.logo a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+nav ul li{
+    display: inline;
+}
+.button{
+    display: flex;
+    gap: 12px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: #3a3636;
+    padding: 12px 24px;
+    min-width: 140px;
+}

@@ -1,0 +1,59 @@
+
+*,html,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* default */
+    --white: #fff;
+    --black: #000;
+
+    /*  */
+
+}
+
+/* siyam rupali */
+@font-face {
+    font-family: 'Hind Siliguri';
+    src: url('../fonts/siyam-rupali/SiyamRupali.ttf') format('truetype');
+    font-weight: normal;
+}
+
+/**** Hind Siliguri ****/
+
+/* light */
+@font-face {
+    font-family: 'Hind Siliguri';
+    src: url('../fonts/hind-siliguri/HindSiliguri-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+
+/* regular */
+@font-face {
+    font-family: 'Hind Siliguri';
+    src: url('../fonts/hind-siliguri/HindSiliguri-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+/* medium */
+@font-face {
+    font-family: 'Hind Siliguri';
+    src: url('../fonts/hind-siliguri/HindSiliguri-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+
+/* semi-bold */
+@font-face {
+    font-family: 'Hind Siliguri';
+    src: url('../fonts/hind-siliguri/HindSiliguri-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+}
+
+/* bold */
+@font-face {
+    font-family: 'Hind Siliguri';
+    src: url('../fonts/hind-siliguri/HindSiliguri-Bold.ttf') format('truetype');
+    font-weight: bold;
+}

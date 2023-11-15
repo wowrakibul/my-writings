@@ -1,0 +1,15 @@
+{
+    "manifest_version":2,
+    "version":"1.0.0",
+    "name": "আমার লেখালেখি",
+    "short_name":"আমার লেখালেখি",
+    "description":"কবি রাকিবুলের লেখালেখি সমূহের আপডেটগুলি", 
+    "short_url":"https://wowrakibul02.github.io/my-writings/",
+    "icons":[
+        {
+            "src":"../../icon/fav/android-chrome-192x192.svg",
+            "sizes":"192x192", 
+            "type":"image/svg"
+        }
+    ]
+}
