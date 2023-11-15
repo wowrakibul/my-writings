@@ -4,12 +4,36 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="shortcut icon" href="asset/icon/fav/ms-icon-144x144.svg" type="image/x-icon">
+        <meta http-equiv="X-UA-Compatible" content="IE=7">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="author" content="Wow Rakibul">
+        <meta name="description"
+            content="কবি রাকিবুলের লেখালেখি। কবিতা, গল্প, গবেষণা এবং তার সমস্ত লেখালেখির আপডেটগুলিকে প্রদর্শন">
+        <meta name="keywords"
+            content="wowrakibul, my-writings, আমার লেখালেখি, wow rakibul, learn with wow rakibul, Rakibul, quotesbywowrakibul, Quotes By Wow Rakibul, রাকিবুলের কবিতা, কবি রাকিবুল, poet rakibul, wow rakibul poetries, রাকিবুলের উক্তি, উক্তি, kobi, bangla kobita, বাংলা কবিতা, কবিতা, bangla kobita bd, কবিতা বাংলা, literature, গবেষণা, বাংলা আধুনিক কবিতা, কবিতা ২০২৩, কবিতা ২০২২, কবিতা ২০২১, কবিতা ২০২০, কবিতা ২০২৭, কবিতা ২০২৪, কবিতা ২০২৫, কবিতা ২০২৬, রাকিবুলের কবিতা, ">
+
+        <link rel="shortcut icon" href="assets/icon/fav/android-chrome-192x192.svg" type="image/x-icon">
+        <link rel="apple-touch-icon" href="assets/icon/fav/apple-touch-icon-180x180.svg">
+        <link rel="icon" href="assets/icon/fav/favicon-16x16.svg" sizes="16x16">
+        <link rel="icon" href="assets/icon/fav/favicon-32x32.svg" sizes="32x32" type="image/svg">
+        <link rel="icon" href="assets/icon/fav/favicon-48x48.svg" sizes="32x32" type="image/svg">
+        <meta name="msapplication-TileImage" content="assets/icon/fav/ms-icon-144x144.svg">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <link rel="mask-icon" href="assets/icon/fav/safari-pinned-tab.svg" type="image/x-icon">
+
+        <title>আমার লেখালেখি - কবি রাকিবুলের লেখালেখির আপডেট</title>
+
+        <!-- style -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/root.css">
+        <link rel="stylesheet" href="assets/css/minmax.css">
+
+        <!-- app installation -->
+        <link rel="manifest" href="assets/js/manifest/manifest.json">
+        <script src="assets/js/manifest/app.js" defer></script>
     </head>
 
     <body>
-        <h1>djjsddjcsc</h1>
         <header>
             <div class="logo">আমার লেখালেখি
                 <a href="#" class="redirect-auth">by wow rakibul</a>
@@ -24,10 +48,58 @@
                 </ul>
             </nav>
             <div class="button" id="button">
-                <img src="asset/icon/talk.svg" alt="">
+                <img src="assets/icon/fav/favicon-16x16.svg" alt="">
                 <p>কথা বলুন </p>
             </div>
         </header>
+
+
+        <!-- scriptswri -->
+        <script type="module" src="assets/js/main.js"></script>
+        <script src="assets/js/script.js"></script>
+
+        <!-- app installation -->
+        <script src="assets/js/manifest/service-worker.js" defer></script>
+        <script src="assets/js/manifest/app.js" defer></script>
+
+        <script>
+            // <![CDATA[  <-- For SVG support -->
+            if ('WebSocket' in window) {
+                (function () {
+                    function refreshCSS() {
+                        var sheets = [].slice.call(document.getElementsByTagName("link"));
+                        var head = document.getElementsByTagName("head")[0];
+                        for (var i = 0; i < sheets.length; ++i) {
+                            var elem = sheets[i];
+                            var parent = elem.parentElement || head;
+                            parent.removeChild(elem);
+                            var rel = elem.rel;
+                            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                                elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                            }
+                            parent.appendChild(elem);
+                        }
+                    }
+                    var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                    var address = protocol + window.location.host + window.location.pathname + '/ws';
+                    var socket = new WebSocket(address);
+                    socket.onmessage = function (msg) {
+                        if (msg.data == 'reload') window.location.reload();
+                        else if (msg.data == 'refreshcss') refreshCSS();
+                    };
+                    if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                        console.log('Live reload enabled.');
+                        sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                    }
+                })();
+            }
+            else {
+                console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+            }
+            // ]]>
+        </script>
+
     </body>
 
 </html>
